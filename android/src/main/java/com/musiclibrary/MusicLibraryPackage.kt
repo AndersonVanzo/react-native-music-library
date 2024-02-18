@@ -16,19 +16,19 @@ class MusicLibraryPackage : TurboReactPackage() {
     }
   }
 
-  override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
-    return ReactModuleInfoProvider {
-      val moduleInfos: MutableMap<String, ReactModuleInfo> = HashMap()
-      moduleInfos[MusicLibraryModule.NAME] = ReactModuleInfo(
-        MusicLibraryModule.NAME,
-        MusicLibraryModule.NAME,
-        false,  // canOverrideExistingModule
-        false,  // needsEagerInit
-        true,  // hasConstants
-        false,  // isCxxModule
-        true // isTurboModule
-      )
-      moduleInfos
+    override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+        return ReactModuleInfoProvider {
+            val moduleInfos: MutableMap<String, ReactModuleInfo> = HashMap()
+            moduleInfos[MusicLibraryModule.NAME] = ReactModuleInfo(
+                MusicLibraryModule.NAME,
+                MusicLibraryModule.NAME,
+                false,  // canOverrideExistingModule
+                false,  // needsEagerInit
+                true,  // hasConstants
+                false,  // isCxxModule
+                true // isTurboModule
+            )
+            moduleInfos
+        }
     }
-  }
 }
