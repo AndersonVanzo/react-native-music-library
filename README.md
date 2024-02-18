@@ -1,6 +1,6 @@
 # react-native-music-library
 
-A library to search for music files in device's memory
+A library to search for music files in device's memory (**Android only**)
 
 ## Installation
 
@@ -12,11 +12,11 @@ npm install react-native-music-library
 
 
 ```js
-import { multiply } from 'react-native-music-library';
+import { loadMusicFiles, MusicFile } from 'react-native-music-library';
 
 // ...
 
-const result = multiply(3, 7);
+const result: MusicFile[] = await loadMusicFiles();
 ```
 
 ## Contributing
